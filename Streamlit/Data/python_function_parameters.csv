@@ -40,6 +40,12 @@ move_file_in_folder,file_name,str,"Name of File to be moved, does not matter of 
 move_file_in_folder,overwrite_without_validation,bool,Optional Argument allowing user to automate by apply to default overwrite (also meant to help reduce risk of losting information due to inadvertent overwriting),filesystem_tools.py
 txt_to_python,file_name,str,"Name of File, including path location for import",filesystem_tools.py
 txt_to_python,encoding,str,Encoding to be applied by With Open call. Default is utf-8.,filesystem_tools.py
+export_formatted_df_to_single_xlsx,df,dataframe,Any Dataframe,filesystem_tools.py
+export_formatted_df_to_single_xlsx,file_name,str,Name of Excel Output File,filesystem_tools.py
+export_formatted_df_to_single_xlsx,sheet_name,str,Name of Sheet to be generated in Excel,filesystem_tools.py
+export_formatted_df_to_single_xlsx,index,bool,Include DF index in output as default action,filesystem_tools.py
+export_formatted_df_to_single_xlsx,freeze_header,bool,Freeze Excel File Column Header as default action,filesystem_tools.py
+export_formatted_df_to_single_xlsx,column_formats,,,filesystem_tools.py
 extract_object_dot_py,object_dict,dict,Dictionary Object from either objects_manual or objects_automated,archive.py
 extract_object_dot_py,export_location,str,Location where .xlsx file will be saved.,archive.py
 ETL,print_,bool,To Be Determined Utilization.,archive.py
@@ -55,3 +61,17 @@ generate_objects_automated_py,definition_df,df,Data from Google Sheets. If nothi
 generate_objects_automated_py,method,,,archive.py
 extract_consolidated_raw_dataset,df_dict,dict,Dictionary of files to be included.,archive.py
 extract_consolidated_raw_dataset,export_location,str,"Location to where CSV file is to be exported. If left Blank, will not export a CSV.",archive.py
+visualize_dataframe_in_notebook,df,dataframe,Any DataFrame,object_rendering.py
+visualize_dataframe_in_notebook,show_as_number,list,"List of Columns which are to be displayed as format :,.2f",object_rendering.py
+visualize_dataframe_in_notebook,show_as_currency,list,"List of Columns which are to be displayed as format $:,.2f",object_rendering.py
+visualize_dataframe_in_notebook,show_as_currency_without_dec,list,"List of Columns which are to be displayed as format $:,.0f",object_rendering.py
+visualize_dataframe_in_notebook,show_as_percentage,list,List of Columns which are to be displayed as format :.2f%,object_rendering.py
+print_dict,d,dict,Any Dictionary.,object_rendering.py
+print_dict,indent,float,Indent Required,object_rendering.py
+create_short_form_ml_project_dict,df,dataframe,"Optional. DataFrame containing the Short Form ML Project definitions. If not provided, the knowledge base is loaded directly.",object_rendering.py
+create_baseline_dictionary_for_project,d,dict,,object_rendering.py
+create_baseline_dictionary_for_project,dict_name,str,,object_rendering.py
+create_baseline_dictionary_for_project,blank_keys,list,,object_rendering.py
+visualize_dict_as_docx,data,dict,Dictionary,object_rendering.py
+visualize_dict_as_docx,output_file,str,Name of docx file.,object_rendering.py
+visualize_dict_as_docx,split_pages,bool,True or False Flag to determine whether each 1st level key will be generated immediately after or split to a new page.,object_rendering.py
